@@ -1,0 +1,3 @@
+shared/*
+*.swp
+mount/cell_data/*

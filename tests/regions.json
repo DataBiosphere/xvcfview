@@ -1,0 +1,7 @@
+{
+  "input_vcf": "tests/fixtures/multisample.vcf.gz",
+  "cpu": 2,
+  "memory": 2,
+  "regions": "tests/fixtures/regions.txt",
+  "output_filename": "4eba3726-e670-11eb-ad8d-d7090e1ace45.vcf.gz"
+}

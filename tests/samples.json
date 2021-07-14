@@ -1,0 +1,7 @@
+{
+  "input_vcf": "tests/fixtures/multisample.vcf.gz",
+  "cpu": 2,
+  "memory": 2,
+  "samples": "tests/fixtures/samples.txt",
+  "output_filename": "3546435c-e670-11eb-9cbf-5f11d1e37c01.vcf.gz"
+}
