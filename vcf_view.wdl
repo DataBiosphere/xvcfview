@@ -8,7 +8,7 @@ workflow xVCFViewWorkflow {
         File? regions
         String view_options = "-Oz"
         String? filters
-		String output_filename = "output.vcf.gz"
+        String output_filename = "output.vcf.gz"
         Int cpu = 8
         Int memory = 64
         Int preemptible = 0
@@ -19,7 +19,7 @@ workflow xVCFViewWorkflow {
                     regions=regions,
                     view_options=view_options,
                     filters=filters,
-					output_filename=output_filename,
+                    output_filename=output_filename,
                     cpu=cpu,
                     memory=memory,
                     preemptible=preemptible }
@@ -36,7 +36,7 @@ task xVCFView {
         File? regions
         String? view_options
         String? filters
-		String? output_filename
+        String? output_filename
         Int cpu = 8
         Int memory = 64
         Int preemptible = 0
