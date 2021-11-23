@@ -1,0 +1,9 @@
+version: 1.2
+workflows:
+   - subclass: WDL
+     primaryDescriptorPath: /vcf_view.wdl
+     testParameterFiles:
+         - /tests/regions.json
+         - /tests/samples.json
+         - /tests/regions_and_samples.json
+     name: xvcfview
