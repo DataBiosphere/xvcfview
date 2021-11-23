@@ -48,6 +48,10 @@ task xVCFView {
         preemptible: "${preemptible}"
     }
     command <<<
+        # do not delete these lines -- they are required for indexing to work properly on Terra
+        set -eux -o pipefail
+        find . -type d -exec sudo chmod -R 777 {} +
+
         echo "input vcf: '~{input_vcf}'"
         echo "input vcf index: '~{input_vcf_index}'"
 
