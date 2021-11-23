@@ -1,0 +1,7 @@
+{
+  "xVCFViewWorkflow.input_vcf": "tests/fixtures/multisample.vcf.gz",
+  "xVCFViewWorkflow.cpu": 2,
+  "xVCFViewWorkflow.memory": 2,
+  "xVCFViewWorkflow.samples": "tests/fixtures/samples.txt",
+  "xVCFViewWorkflow.output_filename": "3546435c-e670-11eb-9cbf-5f11d1e37c01.vcf.gz"
+}

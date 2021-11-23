@@ -1,9 +1,9 @@
 {
-  "input_vcf": "tests/fixtures/multisample.vcf.gz",
-  "cpu": 2,
-  "memory": 2,
-  "samples": "tests/fixtures/samples.txt",
-  "regions": "tests/fixtures/regions.txt",
-  "output_filename": "42291cc0-e670-11eb-b12a-6bb3d4e3044e.vcf.gz",
-  "view_options": "-Oz -a"
+  "xVCFViewWorkflow.input_vcf": "gs://topmed_workflow_testing/xvcf/multisample.vcf.gz",
+  "xVCFViewWorkflow.cpu": 2,
+  "xVCFViewWorkflow.memory": 2,
+  "xVCFViewWorkflow.samples": "gs://topmed_workflow_testing/xvcf/samples.txt",
+  "xVCFViewWorkflow.regions": "gs://topmed_workflow_testing/xvcf/regions.txt",
+  "xVCFViewWorkflow.output_filename": "42291cc0-e670-11eb-b12a-6bb3d4e3044e.vcf.gz",
+  "xVCFViewWorkflow.view_options": "-Oz -a"
 }
