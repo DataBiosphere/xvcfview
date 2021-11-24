@@ -49,7 +49,7 @@ task xVCFView {
     }
     command <<<
         echo "input vcf: '~{input_vcf}'"
-        echo "input vcf index: '~{input_vcf_index}'"
+        echo "input vcf index: '~{input_vcf_index}'" 
 
         if [[ ! "~{input_vcf_index}" ]]; then
             echo "indexing '~{input_vcf}'"
