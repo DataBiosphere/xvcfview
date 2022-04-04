@@ -12,6 +12,7 @@ workflow xVCFViewWorkflow {
         Int cpu = 8
         Int memory = 64
         Int preemptible = 0
+        Int additional_disk = 1
     }
     call xVCFView { input: input_vcf=input_vcf,
                     input_vcf_index=input_vcf_index,
@@ -40,8 +41,16 @@ task xVCFView {
         Int cpu = 8
         Int memory = 64
         Int preemptible = 0
+        Int additional_disk = 1
     }
+    # estimate disk size required
+    Int vcf_size        = ceil(size(input_vcf, "GB"))
+    Int index_size      = select_first([ceil(size(input_vcf_index, "GB")), 0])
+    Int samples_size    = select_first([ceil(size(samples, "GB")), 0])
+    Int regions_size    = select_first([ceil(size(regions, "GB")), 0])
+    Int final_disk_size = vcf_size + index_size + samples_size + regions_size + additional_disk
     runtime {
+        disks: "local-disk " + final_disk_size + " HDD"
         docker: "xbrianh/xsamtools:v0.5.2"
         memory: "${memory}G"
         cpu: "${cpu}"
